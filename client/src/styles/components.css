@@ -149,7 +149,7 @@
   font-weight: 800;
   line-height: 1;
   margin-bottom: var(--space-2);
-  animation: countUp var(--transition-slow) ease forwards;
+  animation: countUp var(--transition-slow) forwards;
 }
 
 .metric-card .metric-label {
@@ -376,7 +376,7 @@
   font-size: var(--text-sm);
   font-weight: 500;
   backdrop-filter: blur(16px);
-  animation: fadeInUp var(--transition-base) ease forwards;
+  animation: fadeInUp var(--transition-base) forwards;
   box-shadow: var(--shadow-lg);
   max-width: 400px;
 }
