@@ -293,20 +293,20 @@ input, select, textarea {
 }
 
 .animate-fade-in {
-  animation: fadeIn var(--transition-base) ease forwards;
+  animation: fadeIn var(--transition-base) forwards;
 }
 
 .animate-fade-in-up {
-  animation: fadeInUp var(--transition-slow) ease forwards;
+  animation: fadeInUp var(--transition-slow) forwards;
 }
 
 .animate-slide-in-left {
-  animation: slideInLeft var(--transition-slow) ease forwards;
+  animation: slideInLeft var(--transition-slow) forwards;
 }
 
 /* Staggered children */
 .stagger > * {
-  animation: fadeInUp var(--transition-slow) ease forwards;
+  animation: fadeInUp var(--transition-slow) forwards;
   opacity: 0;
 }
 .stagger > *:nth-child(1) { animation-delay: 0ms; }
