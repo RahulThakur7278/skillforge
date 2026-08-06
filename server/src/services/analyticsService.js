@@ -4,8 +4,8 @@
  * Dashboard metrics and aggregate analytics queries.
  */
 
-const { readQuery } = require('../config/database');
-const { toNum, deepConvert } = require('../utils/cypher');
+import { readQuery } from '../config/database.js';
+import { toNum, deepConvert } from '../utils/cypher.js';
 
 /**
  * Dashboard summary metrics.
@@ -91,7 +91,7 @@ async function getSalaryByLevel() {
   }));
 }
 
-module.exports = {
+export {
   getDashboardMetrics,
   getDomainDistribution,
   getTopRequiredSkills,

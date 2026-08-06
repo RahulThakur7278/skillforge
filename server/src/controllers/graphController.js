@@ -2,7 +2,7 @@
  * Graph Controller
  */
 
-const graphService = require('../services/graphService');
+import * as graphService from '../services/graphService.js';
 
 async function getNeighborhood(req, res, next) {
   try {
@@ -75,7 +75,7 @@ async function getSkillPathGraph(req, res, next) {
   }
 }
 
-module.exports = {
+export {
   getNeighborhood,
   getFullNetwork,
   analyzeSkillGap,

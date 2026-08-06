@@ -5,7 +5,7 @@
  * plain JS objects suitable for JSON responses.
  */
 
-const neo4j = require('neo4j-driver');
+import neo4j from 'neo4j-driver';
 
 /**
  * Converts a Neo4j Integer to a JS number.
@@ -60,4 +60,4 @@ function relToObj(rel) {
   };
 }
 
-module.exports = { toNum, deepConvert, nodeToObj, relToObj };
+export { toNum, deepConvert, nodeToObj, relToObj };

@@ -6,9 +6,9 @@
  * and graceful shutdown.
  */
 
-const neo4j = require('neo4j-driver');
-const { getConfig } = require('./env');
-const { logger } = require('../utils/logger');
+import neo4j from 'neo4j-driver';
+import { getConfig } from './env.js';
+import { logger } from '../utils/logger.js';
 
 let _driver = null;
 
@@ -109,7 +109,7 @@ function toNumber(val) {
   return 0;
 }
 
-module.exports = {
+export {
   getDriver,
   verifyConnection,
   readQuery,

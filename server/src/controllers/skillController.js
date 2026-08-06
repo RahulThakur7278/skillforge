@@ -5,7 +5,7 @@
  * Maps requests to service calls and formats responses.
  */
 
-const skillService = require('../services/skillService');
+import * as skillService from '../services/skillService.js';
 
 async function listSkills(req, res, next) {
   try {
@@ -89,7 +89,7 @@ async function getComplementary(req, res, next) {
   }
 }
 
-module.exports = {
+export {
   listSkills,
   getSkill,
   getCategories,
