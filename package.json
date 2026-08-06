@@ -2,6 +2,7 @@
   "name": "skillforge",
   "version": "1.0.0",
   "description": "Career & Skill Intelligence Platform — powered by CognoDB Cloud",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
