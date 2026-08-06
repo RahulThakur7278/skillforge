@@ -1,10 +1,9 @@
-const { createApp } = require('../server/src/app');
-const { validateEnv } = require('../server/src/config/env');
+import { createApp } from '../server/src/app.js';
+import { validateEnv } from '../server/src/config/env.js';
 
-// Validate environment variables (throws if missing)
+// Validate environment variables for the serverless function
 validateEnv();
 
-// Create and export the Express app for Vercel Serverless Functions
+// Create and export the Express app for Vercel Serverless
 const app = createApp();
-
-module.exports = app;
+export default app;
