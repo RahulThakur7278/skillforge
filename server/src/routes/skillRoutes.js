@@ -1,5 +1,6 @@
-const router = require('express').Router();
-const c = require('../controllers/skillController');
+import express from 'express';
+import * as c from '../controllers/skillController.js';
+const router = express.Router();
 
 router.get('/', c.listSkills);
 router.get('/categories', c.getCategories);
@@ -9,4 +10,4 @@ router.get('/bridges', c.getBridges);
 router.get('/:name', c.getSkill);
 router.get('/:name/complementary', c.getComplementary);
 
-module.exports = router;
+export default router;

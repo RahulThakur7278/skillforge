@@ -21,4 +21,4 @@ const logger = {
   debug: (...args) => currentLevel >= LOG_LEVELS.debug && console.log(fmt('debug'), ...args),
 };
 
-module.exports = { logger };
+export { logger };

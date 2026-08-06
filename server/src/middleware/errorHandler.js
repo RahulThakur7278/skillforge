@@ -6,7 +6,7 @@
  * error codes to appropriate HTTP status codes.
  */
 
-const { logger } = require('../utils/logger');
+import { logger } from '../utils/logger.js';
 
 // Neo4j / CognoDB error code mappings
 const NEO4J_ERROR_MAP = {
@@ -61,4 +61,4 @@ function errorHandler(err, _req, res, _next) {
   });
 }
 
-module.exports = { errorHandler };
+export { errorHandler };

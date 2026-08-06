@@ -2,7 +2,7 @@
  * Analytics Controller
  */
 
-const analyticsService = require('../services/analyticsService');
+import * as analyticsService from '../services/analyticsService.js';
 
 async function getDashboard(_req, res, next) {
   try {
@@ -30,4 +30,4 @@ async function getDomainDistribution(_req, res, next) {
   }
 }
 
-module.exports = { getDashboard, getDomainDistribution };
+export { getDashboard, getDomainDistribution };

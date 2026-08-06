@@ -5,10 +5,10 @@
  * verifies the CognoDB connection, and starts listening.
  */
 
-const { createApp } = require('./src/app');
-const { validateEnv } = require('./src/config/env');
-const { getDriver, verifyConnection, closeDriver } = require('./src/config/database');
-const { logger } = require('./src/utils/logger');
+import { createApp } from './src/app.js';
+import { validateEnv } from './src/config/env.js';
+import { getDriver, verifyConnection, closeDriver } from './src/config/database.js';
+import { logger } from './src/utils/logger.js';
 
 const PORT = process.env.PORT || 3001;
 
