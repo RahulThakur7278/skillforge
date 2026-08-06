@@ -5,8 +5,12 @@
  * application starts. Fails fast with a clear message on missing config.
  */
 
-const path = require('path');
-const dotenv = require('dotenv');
+import path from 'path';
+import dotenv from 'dotenv';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Load .env from project root
 dotenv.config({ path: path.resolve(__dirname, '../../../.env') });
@@ -46,4 +50,4 @@ function getConfig() {
   };
 }
 
-module.exports = { validateEnv, getConfig };
+export { validateEnv, getConfig };

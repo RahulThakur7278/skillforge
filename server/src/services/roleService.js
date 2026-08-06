@@ -5,8 +5,8 @@
  * required skills, and role-to-role progression traversals.
  */
 
-const { readQuery } = require('../config/database');
-const { nodeToObj, deepConvert, toNum } = require('../utils/cypher');
+import { readQuery } from '../config/database.js';
+import { nodeToObj, deepConvert, toNum } from '../utils/cypher.js';
 
 /**
  * List all roles, optionally filtered by level or domain.
@@ -95,7 +95,7 @@ async function getRoleLevels() {
   }));
 }
 
-module.exports = {
+export {
   listRoles,
   getRoleByTitle,
   getCareerPaths,

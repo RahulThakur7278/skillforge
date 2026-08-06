@@ -4,16 +4,16 @@
  * Configures middleware, routes, health checks, and error handling.
  */
 
-const express = require('express');
-const cors = require('cors');
-const helmet = require('helmet');
-const morgan = require('morgan');
-const rateLimit = require('express-rate-limit');
-const { getConfig } = require('./config/env');
-const { verifyConnection, getDriver } = require('./config/database');
-const routes = require('./routes');
-const { errorHandler } = require('./middleware/errorHandler');
-const path = require('path');
+import express from 'express';
+import cors from 'cors';
+import helmet from 'helmet';
+import morgan from 'morgan';
+import rateLimit from 'express-rate-limit';
+import { getConfig } from './config/env.js';
+import { verifyConnection, getDriver } from './config/database.js';
+import routes from './routes/index.js';
+import { errorHandler } from './middleware/errorHandler.js';
+import path from 'path';
 
 function createApp() {
   const app = express();
@@ -88,4 +88,4 @@ function createApp() {
   return app;
 }
 
-module.exports = { createApp };
+export { createApp };

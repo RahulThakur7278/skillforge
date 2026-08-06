@@ -2,7 +2,7 @@
  * Role Controller
  */
 
-const roleService = require('../services/roleService');
+import * as roleService from '../services/roleService.js';
 
 async function listRoles(req, res, next) {
   try {
@@ -48,4 +48,4 @@ async function getRoleLevels(_req, res, next) {
   }
 }
 
-module.exports = { listRoles, getRole, getCareerPaths, getRoleLevels };
+export { listRoles, getRole, getCareerPaths, getRoleLevels };

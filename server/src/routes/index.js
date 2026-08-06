@@ -4,11 +4,17 @@
  * Mounts all API route modules under their base paths.
  */
 
-const router = require('express').Router();
+import express from 'express';
+import skillRoutes from './skillRoutes.js';
+import roleRoutes from './roleRoutes.js';
+import graphRoutes from './graphRoutes.js';
+import analyticsRoutes from './analyticsRoutes.js';
 
-router.use('/skills', require('./skillRoutes'));
-router.use('/roles', require('./roleRoutes'));
-router.use('/graph', require('./graphRoutes'));
-router.use('/analytics', require('./analyticsRoutes'));
+const router = express.Router();
 
-module.exports = router;
+router.use('/skills', skillRoutes);
+router.use('/roles', roleRoutes);
+router.use('/graph', graphRoutes);
+router.use('/analytics', analyticsRoutes);
+
+export default router;

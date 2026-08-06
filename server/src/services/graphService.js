@@ -6,8 +6,8 @@
  * formatted for D3.js force-directed graphs.
  */
 
-const { readQuery } = require('../config/database');
-const { nodeToObj, relToObj, deepConvert, toNum } = require('../utils/cypher');
+import { readQuery } from '../config/database.js';
+import { nodeToObj, relToObj, deepConvert, toNum } from '../utils/cypher.js';
 
 /**
  * Builds a { nodes, links } object from raw Neo4j path/node/rel records,
@@ -187,7 +187,7 @@ async function getSkillPathGraph(fromSkill, toSkill) {
   return buildGraphData(r.get('pathNodes'), r.get('pathRels'));
 }
 
-module.exports = {
+export {
   getNeighborhood,
   getFullNetwork,
   analyzeSkillGap,

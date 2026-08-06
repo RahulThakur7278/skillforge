@@ -6,8 +6,8 @@
  * Every query is parameterized via the official Neo4j driver.
  */
 
-const { readQuery } = require('../config/database');
-const { nodeToObj, deepConvert, toNum } = require('../utils/cypher');
+import { readQuery } from '../config/database.js';
+import { nodeToObj, deepConvert, toNum } from '../utils/cypher.js';
 
 /**
  * List all skills, optionally filtered by category or search term.
@@ -162,7 +162,7 @@ async function getComplementarySkills(skillName) {
   }));
 }
 
-module.exports = {
+export {
   listSkills,
   getSkillByName,
   getCategories,
