@@ -40,6 +40,29 @@
   z-index: 50;
 }
 
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  color: var(--text-primary);
+  border: none;
+  cursor: pointer;
+  padding: var(--space-1);
+}
+
+.mobile-menu-btn:hover {
+  color: var(--purple);
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
 .header-title {
   font-size: var(--text-lg);
   font-weight: 600;
@@ -89,9 +112,22 @@
 .sidebar-logo {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
+  justify-content: space-between;
   padding: var(--space-5) var(--space-5);
   border-bottom: 1px solid var(--border-subtle);
+}
+
+.mobile-close-btn {
+  display: none;
+  background: transparent;
+  color: var(--text-primary);
+  border: none;
+  cursor: pointer;
+  padding: var(--space-1);
+}
+
+.mobile-close-btn:hover {
+  color: var(--purple);
 }
 
 .sidebar-logo-icon {
@@ -275,6 +311,7 @@
 .explorer-controls {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: var(--space-3);
   margin-bottom: var(--space-4);
 }
@@ -542,6 +579,26 @@
     transform: translateX(0);
   }
 
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 55;
+  }
+
+  .mobile-menu-btn, .mobile-close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .status-text {
+    display: none;
+  }
+
   .main-content {
     margin-left: 0;
   }
@@ -560,5 +617,34 @@
 
   .resource-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .explorer-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .explorer-controls > div[style] {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-metrics {
+    grid-template-columns: 1fr;
+  }
+  
+  .skill-gap-summary {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-4);
+  }
+
+  .dashboard-grid {
+    gap: var(--space-4);
+  }
+
+  .page-container {
+    padding: var(--space-3);
   }
 }
